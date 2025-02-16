@@ -1,1 +1,1 @@
-web: gunicorn proxy:app
+web: gunicorn app:app
