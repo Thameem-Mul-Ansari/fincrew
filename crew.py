@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify‎
 from flask_cors import CORS
 from crewai import Agent, Task, Crew, LLM
 from tools import tool
@@ -65,7 +65,7 @@ investment_advisor = Agent(
 )
 
 
-@app.route('/analyze', methods=['POST'])
+@app.route('/proxy/analyze', methods=['POST'])
 def analyze_stock():
     try:
         data = request.get_json()
